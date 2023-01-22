@@ -1,27 +1,26 @@
 <script setup>
 import { ref, onBeforeMount, reactive } from 'vue';
-let cruz = ref(false);
-let cara = ref(false);
 
-const img = document.getElementById("img");
 let imageSrc = ref("src/assets/suerte2.jpg");
+let result = ref("");
+let cara = ref(0);
+let cruz = ref(0);
 
 function setTimeOut() {
    setTimeout(caraCruz, 1500);
    imageSrc.value = ("https://media3.giphy.com/media/W12WAzuqod9VS/giphy.gif?cid=790b761156106ddeec3c204137667de386416c00eb45fcd1&rid=giphy.gif&ct=g")
-   
 }
-let result = ref("");
 
 const caraCruz = () =>{
     let random =  Math.floor(Math.random()*2 +1)
     if(random === 1){
         imageSrc.value = ("src/assets/lobo.jpg");
         result.value = "CARA";
+        cara.value++
     } else{
         imageSrc.value = ("src/assets/cruz.jpeg")
         result.value = "CRUZ";
-
+        cruz.value++
     } 
 }
 
@@ -31,12 +30,14 @@ const caraCruz = () =>{
 <main> 
         <h1>¿Cara o Cruz?</h1>
         <h2>BUENA SUERTE!</h2>
-        <p v-if="result">Ha salido {{ result }}!</p>
+        <p v-if="result" class="result">Ha salido {{ result }}!</p>
     <div>
         <img :src="imageSrc" id="img" >
         <button @click="setTimeOut">LANZAR</button>        
     </div>
 
+    <p>Cara: {{ cara }}</p>
+    <p>Cruz: {{ cruz }}</p>
 
 </main>
 </template>
@@ -57,31 +58,28 @@ main{
         margin-bottom:1em;
     }
 
-    p{
+    .result{
         margin-bottom: .3em;
         font-size: 3em;
         font-weight: bold;
         color: black;
     }
 
+    p{
+        font-size: 1.5em;
+    }
+
     div{
         height: 20em;
         width: 20em;
-        // background:red;
-        position: relative;
+        margin-bottom: 4em;
 
         img{
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-        }
-        img:nth-child(1){
-            border-radius: 0;
         }
 
         button{
-            // position: absolute;
-            // bottom:0;
             width: 100%;
             height: 3em;
             background: blue;
