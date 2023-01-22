@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onBeforeMount, reactive } from 'vue';
 
-let imageSrc = ref("src/assets/suerte2.jpg");
+let imageSrc = ref("https://img.ecartelera.com/noticias/45400/45447-m.jpg");
 let result = ref("");
 let cara = ref(0);
 let cruz = ref(0);
@@ -14,11 +14,11 @@ function setTimeOut() {
 const caraCruz = () =>{
     let random =  Math.floor(Math.random()*2 +1)
     if(random === 1){
-        imageSrc.value = ("src/assets/lobo.jpg");
+        imageSrc.value = ("https://images.ecestaticos.com/mR_I6LnJXu_3a1t0i-bnnD8ZcsU=/0x0:0x0/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F108%2Fbb2%2Fcbd%2F108bb2cbd984f087cad9e0d71440fa6d.jpg");
         result.value = "CARA";
         cara.value++
     } else{
-        imageSrc.value = ("src/assets/cruz.jpeg")
+        imageSrc.value = ("https://i.blogs.es/e2031a/lobo/840_560.jpeg")
         result.value = "CRUZ";
         cruz.value++
     } 
