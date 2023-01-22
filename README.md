@@ -1,35 +1,23 @@
 # Heads-Or-Tails
 
-This template should help get you started developing with Vue 3 in Vite.
+Very simple project to play heads or tails and be able to count the times it comes out
 
-## Recommended IDE Setup
+## Resultado
+![image](https://user-images.githubusercontent.com/116892825/213942484-0c2cad89-79f0-4f36-9d6a-5f6b1138e638.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Resultado interactivo
+![image](https://user-images.githubusercontent.com/116892825/213942582-e8b19da4-b628-4a54-a734-417b01d31fe6.png)
 
-## Customize configuration
+### Herramientas utilizadas
+- HTML5 
+- Sass (Flex-box)
+- JavaScript 
+- Vue3
+- Vite
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+### Autor
 
-```sh
-npm install
-```
+- [Enol Igareta](https://github.com/EnolCode)
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
